@@ -9,17 +9,21 @@ namespace acfour_alejandro_martin
             const string MSG2 = "Inserta el {0} numero:";
             const string Error = "Error";
             int numDeInputs = 0;
-            do
-            {
-                Console.WriteLine(MSG1);
-                numDeInputs = Convert.ToInt32(Console.ReadLine());
-            } while (numDeInputs <= 0);
-            int[] userNums = new int[numDeInputs];
             try
             {
+                do
+                {
+                    Console.WriteLine(MSG1);
+                    numDeInputs = Convert.ToInt32(Console.ReadLine());
+                } while (numDeInputs <= 0);
+                int[] userNums = new int[numDeInputs];
                 for (int i = 0; i < userNums.Length; i++) {
                     Console.WriteLine(MSG2);
-                    userNums(i) = Convert.ToInt32(Console.ReadLine());
+                    userNums[i] = Convert.ToInt32(Console.ReadLine());
+                }
+                for (int i = 0; i < userNums.Length; i++)
+                {
+                    Console.WriteLine(userNums[i]);
                 }
             }
             catch (FormatException) {
